@@ -47,7 +47,14 @@ def reverse_complement(dna):
     rev_comp = complement[::-1]
     return rev_comp
 
-print(reverse_complement('ATGATCAAG'))
+# Scans a genome for a specific pattern and returns the starting index of all occurences of the pattern
+def pattern_match(genome, pattern):
+    indices = []
+    for i in range(0, len(genome) - len(pattern) + 1):
+        if genome[i: i + len(pattern)] == pattern:
+            indices.append(i)
+    return indices
+
 
 
 
