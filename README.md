@@ -1,5 +1,5 @@
 # Replication Origin
-## Coding challenges from UCSD's Bioinformatics I Week 1
+## Coding Challenges from UCSD's Bioinformatics I Week 1
 Python script that contains tools for analyzing the replication origins of genomes:
 - pattern_count: takes a string and a pattern and returns how many times the pattern occurs in the string
 - frequency_table: builds a frequency table of how often specific patterns of length k occur in a string
