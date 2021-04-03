@@ -55,6 +55,29 @@ def pattern_match(genome, pattern):
             indices.append(i)
     return indices
 
+# Scans a genome to find clumps of idnetical k-mers and returns a list of the k-mers that appear in clumps
+def find_clumps(genome, k, L, t):
+    patterns = []
+    n = len(genome)
+    for i in range(0, n - L + 1):
+        window = genome[i: i + L]
+        freq_table = frequency_table(window, k)
+        for key in freq_table:
+            if freq_table[key] >= t:
+                patterns.append(key)
+    patterns = set(patterns)
+    return patterns
+
+
+
+
+vibrio = open('/home/jakedam/ucsd-bioinformatics/bioinformatics-I/week1/replication_origin/datasets/Vibrio_cholerae.txt').read()
+ecoli = open('/home/jakedam/ucsd-bioinformatics/bioinformatics-I/week1/replication_origin/datasets/E_coli.txt').read()
+
+
+
+print(len(find_clumps(ecoli, 9, 500, 3)))
+
 
 
 

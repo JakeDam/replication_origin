@@ -7,3 +7,4 @@ Python script that contains tools for analyzing the replication origins of genom
 - frequent_words: returns an array of the most frequent pattern(s) of length k in a string 
 - reverse_complement: takes in a DNA sequence and returns its reverse complement 
 - pattern_match: scans genome for a specific pattern and returns the starting index of each instance of the pattern
+- find_clumps: scans a genome for clumps of identical k-mers
